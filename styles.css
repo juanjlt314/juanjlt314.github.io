@@ -1,0 +1,117 @@
+body {
+  background-color: #0a0a0a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(135deg, #0a0a0a, #1a1a2e, #16213e);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% { background-position: 0% 50% }
+}
+
+#title-container {
+  text-align: center;
+  margin-bottom: 30px;
+  animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+#title {
+  font-size: 2.8em;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  letter-spacing: 2px;
+  font-weight: 600;
+  background: linear-gradient(45deg, #fff, #a3a3a3);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+#title:hover {
+  text-shadow: 3px 3px 12px rgba(255, 255, 255, 0.2);
+  letter-spacing: 2.2px;
+}
+
+#subtitle {
+  font-size: 1.3em;
+  color: #8e9eab;
+  font-weight: 300;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+  letter-spacing: 1px;
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+#subtitle:hover {
+  color: #a4b4c4;
+  letter-spacing: 1.2px;
+}
+
+#canvas {
+  background-color: rgba(20, 20, 30, 0.7);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-width: 95%;
+  max-height: 65%;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#canvas:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+  transform: translateY(-5px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+#credits {
+  position: fixed;
+  bottom: 15px;
+  right: 20px;
+  font-size: 0.9em;
+  color: #6d7f91;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+  transition: all 0.3s ease;
+  padding: 8px 15px;
+  border-radius: 15px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+}
+
+#credits:hover {
+  color: #8e9eab;
+  background: rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  #title {
+    font-size: 2.2em;
+  }
+  
+  #subtitle {
+    font-size: 1.1em;
+  }
+  
+  #canvas {
+    max-height: 55%;
+  }
+}
